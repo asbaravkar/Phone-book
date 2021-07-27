@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductFilterPipe } from './contact/contact.filter';
+import { FormsModule } from '@angular/forms';
+import { ContactService } from './contact.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactComponent,
+    ProductFilterPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
